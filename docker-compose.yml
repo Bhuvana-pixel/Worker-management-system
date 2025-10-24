@@ -1,0 +1,29 @@
+version: "3"
+services:
+  backend:
+    build: ./backend
+    container_name: mern-backend
+    ports:
+      - "5000:5000"
+    env_file:
+      - ./backend/.env
+    volumes:
+      - ./backend:/app
+    networks:
+      - mern-network
+
+  frontend:
+    build: ./frontend
+    container_name: mern-frontend
+    ports:
+      - "3000:3000"
+    stdin_open: true
+    tty: true
+    networks:
+      - mern-network
+    depends_on:
+      - backend
+
+networks:
+  mern-network:
+    driver: bridge
