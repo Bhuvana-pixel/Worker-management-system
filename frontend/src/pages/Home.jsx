@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import RegisterModal from "../pages/RegisterModal";
-import "../styles/home.css";
+import "../styles/Home.css";
 import homeBg from "../assets/bg2.jpg";
 
 const Home = () => {
