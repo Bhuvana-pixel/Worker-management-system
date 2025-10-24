@@ -14,4 +14,4 @@ COPY . .
 
 EXPOSE 5000
 # ensure your start script uses a port from process.env.PORT
-CMD ["node", "index.js"]
+CMD ["node", "server.js"]
